@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080a0f">
+  <meta name="description" content="CART3R AI command centre">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/cart3r-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>CART3R AI</title>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="core">C</div><div><b>CART3R</b><small>PERSONAL AI SYSTEM</small></div></div>
+      <div class="status"><span class="pulse"></span><span id="statusText">OFFLINE</span></div>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">COMMAND INTERFACE / 14.0</p>
+        <h1>Good to see you.</h1>
+        <p class="muted">Your research and automation workspace.</p>
+      </section>
+      <section class="metrics">
+        <div class="metric"><span>SYSTEM</span><b id="systemState">Not connected</b></div>
+        <div class="metric"><span>MODE</span><b>Permission-led</b></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><p class="eyebrow">01 / AI CONSOLE</p><h2>Talk to CART3R</h2></div><span class="live-tag">READY</span></div>
+        <div id="chat" class="chat" aria-live="polite">
+          <div class="bubble bot"><b>CART3R</b><p>Systems standing by. Connect your backend in Settings, then give me a research or planning task.</p></div>
+        </div>
+        <form id="chatForm" class="composer">
+          <textarea id="prompt" rows="2" maxlength="4000" placeholder="What would you like me to research or plan?" required></textarea>
+          <button id="sendBtn" type="submit" aria-label="Send">➤</button>
+        </form>
+        <p class="hint">CART3R can research, save notes and create tasks. It won't perform external actions without a supported, explicit approval flow.</p>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><div><p class="eyebrow">02 / WORKSPACE</p><h2>Quick access</h2></div></div>
+        <div class="quick-grid">
+          <button class="quick" data-view="tasks"><span>▤</span><b>Tasks</b><small>View saved tasks</small></button>
+          <button class="quick" data-view="notes"><span>▧</span><b>Notes</b><small>Research memory</small></button>
+          <button class="quick" data-view="approvals"><span>◇</span><b>Approvals</b><small>Review proposals</small></button>
+          <button class="quick" data-view="settings"><span>⚙</span><b>Settings</b><small>Connect backend</small></button>
+        </div>
+        <div id="workspace" class="workspace"><p class="muted">Choose a workspace tile to load its contents.</p></div>
+      </section>
+      <section class="panel install-panel">
+        <p class="eyebrow">03 / INSTALL</p>
+        <h2>Add CART3R to your iPhone</h2>
+        <p class="muted">Open this site in Safari, tap Share, then choose <b>Add to Home Screen</b>.</p>
+      </section>
+    </main>
+    <footer> CART3R // PERSONAL SYSTEM <span>v14.0.0</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
